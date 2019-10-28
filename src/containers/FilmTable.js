@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import FilmList from "../components/FilmList";
+import ViewMoreButton from "../components/ViewMoreButton";
 
 
 class FilmTable extends Component {
@@ -33,7 +34,10 @@ class FilmTable extends Component {
                   name: "Brittany Runs a Marathon",
                   url: "https://www.imdb.com/title/tt7671064/?ref_=rlm"
                 }
-              ]
+              ],
+              link: {
+                  url: "https://www.imdb.com/calendar/?region=gb"
+              }
         }
     }
 
@@ -42,7 +46,10 @@ class FilmTable extends Component {
             <div className="film-table">
             <h2>Upcoming Film Releases for UK</h2>
             <FilmList data={this.state.data}></FilmList>
+            <ViewMoreButton link={this.state.link}></ViewMoreButton>
             </div>
+            
+            
         )
 
     }
